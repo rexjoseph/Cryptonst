@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="propeller" content="3dad2870657bb115f34eab1f5ede5b71">
+    <title>Cryptonst - Read Top News in the Crypto Industry, Interact and Get Rewards</title>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Spectral|Vollkorn&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="flex">
+                    <% if(!currentUser) { %>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/blogs">News</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                        <!-- <li><a href="/about">About</a></li> -->
+                    <% } else { %>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/blogs">News</a></li>
+                        <!-- <li><a href="/about">About</a></li> -->
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="/logout">Sign out</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="container">
+            <% if(success && success.length > 0) { %>
+                <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>
+            <% } %>
+            <% if(error && error.length > 0) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+        </div>
