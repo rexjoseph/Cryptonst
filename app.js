@@ -17,8 +17,8 @@ User = require('./models/user');
 // const MONGODB_URI =
 // `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 
-// Mlab URL GIVEN TO ME
-mongoose.connect('mongodb://localhost/ebeta');
+// Development DB
+// mongoose.connect('mongodb://localhost/ebeta');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
@@ -53,15 +53,16 @@ app.use('/blogs', blogRoutes);
 // app.listen(process.env.PORT, process.env.IP, () => {
 //     console.log('Server started');
 // });
-// mongoose
-//   .connect('mongodb://rexdb:rexdb123@ds129003.mlab.com:29003/rex_blog')
-//   .then(result => {
-//     app.listen(process.env.PORT || 3000);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
+mongoose
+  .connect('mongodb://rexdb:rexdb123@ds129003.mlab.com:29003/rex_blog')
+  .then(result => {
+    app.listen(process.env.PORT || 3000);
+  })
+  .catch(err => {
+    console.log(err);
+  });
 
-app.listen(process.env.PORT, process.env.IP, () => {
-  console.log('Server Started');
-})
+// Development Server
+// app.listen(process.env.PORT, process.env.IP, () => {
+//   console.log('Server Started');
+// })
