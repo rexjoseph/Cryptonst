@@ -74,7 +74,8 @@ h3 a {
   color: #040429;
 }
 
-a:hover {
+a:hover, 
+a:active {
   color: #ff4e00;
 }
 
