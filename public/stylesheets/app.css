@@ -1,7 +1,7 @@
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 18px;
     color: #333; 
 }
 
@@ -110,14 +110,14 @@ a:hover {
 
 input {
   font-size: 16px;
-  font-family: 'Spectral', sans-serif;
+  font-family: inherit;
   padding: 25px;
 }
 
 .form-width textarea {
   padding: 25px;
   font-size: 16px;
-  font-family: 'Spectral' sans-serif;
+  font-family: inherit;
 }
 
 .form-group {
