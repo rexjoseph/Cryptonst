@@ -3,9 +3,7 @@
 		<div class="center">
 				<div class="caption_none">
 					<h2 id="title__heading"><%= blog.title %></h2>
-					<p>
-						<p>By - <%= blog.author.username %></p>
-					</p>
+					<p>By - <%= blog.author.username %></p>
 					<p><%= blog.created.toDateString() %></p>
 					<img class="img-responsive imageWidth" src="<%= blog.image %>" />
 					<p class="padding"><%= blog.content %></p>

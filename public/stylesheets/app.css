@@ -78,8 +78,10 @@ a:hover {
 }
 
 #author {
-  letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: 'Spectral', sans-serif;
 }
 
 #created {
