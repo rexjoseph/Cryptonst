@@ -64,7 +64,7 @@ app.use('/blogs', blogRoutes);
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${MONGO_DEFAULT_DATABASE}`
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`
   )
   .then(result => {
     app.listen(process.env.PORT || 3000, () => {
