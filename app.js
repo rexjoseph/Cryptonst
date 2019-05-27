@@ -50,30 +50,27 @@ app.use('/', indexRoutes);
 app.use('/blogs/:id/comments', commentRoutes),
 app.use('/blogs', blogRoutes);
 
-// app.listen(process.env.PORT, process.env.IP, () => {
-//     console.log('Server started');
-// });
-// mongoose
-//   .connect('mongodb://rexdb:rexdb123@ds129003.mlab.com:29003/rex_blog')
-//   .then(result => {
-//     app.listen(process.env.PORT || 3000);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-
 mongoose
-  .connect(
-    `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`
-  )
+  .connect('mongodb://rexdb:rexdb123@ds129003.mlab.com:29003/rex_blog')
   .then(result => {
-    app.listen(process.env.PORT || 3000, () => {
-      console.log('Server started!')
-    });
+    app.listen(process.env.PORT || 3000);
   })
   .catch(err => {
     console.log(err);
   });
+
+// mongoose
+//   .connect(
+//     `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`
+//   )
+//   .then(result => {
+//     app.listen(process.env.PORT || 3000, () => {
+//       console.log('Server started!')
+//     });
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
 
 // Development Server
 // app.listen(process.env.PORT, process.env.IP, () => {
