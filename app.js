@@ -14,12 +14,6 @@ blogRoutes = require('./routes/blogs'),
 indexRoutes = require('./routes/index'),
 User = require('./models/user');
 
-// const MONGODB_URI =
-// `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
-
-// Development DB
-// mongoose.connect('mongodb://localhost/ebeta');
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -50,29 +44,17 @@ app.use('/', indexRoutes);
 app.use('/blogs/:id/comments', commentRoutes),
 app.use('/blogs', blogRoutes);
 
+
+
 mongoose
-  .connect('mongodb://rexdb:rexdb123@ds129003.mlab.com:29003/rex_blog')
+  .connect(
+    `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`
+  )
   .then(result => {
-    app.listen(process.env.PORT || 3000);
+    app.listen(process.env.PORT || 3000, () => {
+      console.log('Server started!')
+    });
   })
   .catch(err => {
     console.log(err);
   });
-
-// mongoose
-//   .connect(
-//     `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-t4jqz.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`
-//   )
-//   .then(result => {
-//     app.listen(process.env.PORT || 3000, () => {
-//       console.log('Server started!')
-//     });
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-
-// Development Server
-// app.listen(process.env.PORT, process.env.IP, () => {
-//   console.log('Server Started');
-// })
