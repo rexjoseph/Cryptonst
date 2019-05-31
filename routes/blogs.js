@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         } else {
             res.render('blogs/index', {blogs: allBlogs, currentUser: req.user})
         }
-    });
+    }).sort({created: -1});
 });
 
 // Post to all blogs

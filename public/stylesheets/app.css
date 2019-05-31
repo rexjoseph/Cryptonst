@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #333;
 }
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
-.navbar {
+.navbar, .active_aside {
     background: rgb(51, 51, 51);
     color: #fff;
 }
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h3 a {
-  font-size: 22px;
+  font-size: 19.5px;
   font-weight: 700;
   line-height: 26px;
   color: #040429;
@@ -79,8 +79,9 @@ a:active {
 }
 
 #author {
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
