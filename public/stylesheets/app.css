@@ -1,18 +1,18 @@
 
 body {
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
     font-weight: 400;
     color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  font-family: 'Georgia';
+  font-family: 'Poppins', sans-serif;
 }
 
 #title__heading {
-  font-size: 43px;
+  font-size: 35px;
 }
 
 .form-width {
@@ -44,10 +44,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .flex li {
   padding: 0 15px;
-  font-weight: 500;
-  font-size: 14px;
-  font-family: 'Rubik', sans-serif;
-  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .flex li a {
@@ -67,10 +66,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h3 a {
-  font-size: 19.5px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 26px;
-  color: #040429;
+  line-height: 28px;
+  color: #333;
 }
 
 a:hover, 
@@ -80,13 +79,13 @@ a:active {
 
 #author {
   font-weight: 600;
-  font-size: 14px;
-  font-style: italic;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
 #created {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 #top2 {
@@ -112,15 +111,13 @@ a:active {
 }
 
 input {
-  font-size: 16px;
-  font-family: inherit;
-  padding: 25px;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
 }
 
 .form-width textarea {
-  padding: 25px;
-  font-size: 16px;
-  font-family: inherit;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .form-group {
@@ -133,7 +130,7 @@ input {
 
 label {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .form-width button {
@@ -142,7 +139,7 @@ label {
   background: none;
   outline: none;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   border-radius: 8px;
   color: inherit;
 }
@@ -159,7 +156,8 @@ label {
 footer {
   margin: 100px 0 0;
   font-size: 14px;
-  font-family: 'inherit', sans-serif;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
 footer ul li {
@@ -176,7 +174,7 @@ footer ul li a {
 }
 
 .fab {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
