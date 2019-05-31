@@ -1,5 +1,5 @@
 {
-  "name": "side-fund",
+  "name": "cryptonyst",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -17,8 +17,6 @@
     "express-sanitizer": "^1.0.5",
     "express-session": "^1.16.1",
     "method-override": "^2.3.5",
-    "mongodb": "^3.2.3",
-    "mongoose": "^4.2.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1"

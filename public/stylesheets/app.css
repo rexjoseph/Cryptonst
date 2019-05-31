@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 15px;
     font-weight: 400;
     color: #333;
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
   font-weight: 500;
   font-size: 15px;
-  font-family: 'Spectral', sans-serif;
+  font-family: 'inherit', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -83,7 +83,7 @@ a:active {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 13px;
-  font-family: 'Spectral', sans-serif;
+  font-family: 'inherit', sans-serif;
 }
 
 #created {
@@ -160,7 +160,7 @@ label {
 footer {
   margin: 100px 0 0;
   font-size: 15px;
-  font-family: 'Spectral', sans-serif;
+  font-family: 'inherit', sans-serif;
 }
 
 footer ul li {
