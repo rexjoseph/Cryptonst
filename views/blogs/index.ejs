@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-9">
                 <% blogs.forEach((blog) => { %>
-                    <div class="col-md-3 col-sm-6 thumb" style="display: flex; flex-wrap: wrap;">
+                    <div class="col-md-4 col-sm-6 thumb" style="display: flex; flex-wrap: wrap;">
                             <img src="<%= blog.image %>" />
                             <div class="caption">
                                 <h3><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h3>
