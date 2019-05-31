@@ -6,7 +6,7 @@
 					<p>By - <%= blog.author.username %></p>
 					<p><%= blog.created.toDateString() %></p>
 					<img class="img-responsive imageWidth" src="<%= blog.image %>" />
-					<p class="padding"><%= blog.content %></p>
+					<p class="padding"><%- blog.content %></p>
 				</div>
 				<% if(currentUser && blog.author.id.equals(currentUser._id)) { %>
 					<div class="padding">
