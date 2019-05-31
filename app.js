@@ -47,7 +47,7 @@ app.use('/blogs', blogRoutes);
 mongoose
   .connect('mongodb://Rex:Cso0RD7QDFbOY9kz@cluster0-shard-00-00-t4jqz.mongodb.net:27017,cluster0-shard-00-01-t4jqz.mongodb.net:27017,cluster0-shard-00-02-t4jqz.mongodb.net:27017/crytoBlog?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin')
   .then(result => {
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
   })
   .catch(err => {
     console.log(err);
