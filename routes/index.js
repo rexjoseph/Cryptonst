@@ -16,16 +16,23 @@ router.get('/register', (req, res) => {
 
 // handle sign up logic
 router.post('/register', (req, res) => {
-    var newUser = new User({username: req.body.username, name: req.body.name, email: req.body.email});
-    User.register(newUser, req.body.password, (err, user) => {
-        if (err) {
-            req.flash('error', err.message);
-            return res.render('register');
+    User.findOne({email: req.body.email}).then(user => {
+        if (user) {
+            return res.status(400).json({email: 'Email already in use'})
+        } else {
+            var newUser = new User({username: req.body.username, name: req.body.name, email: req.body.email});
+
+            User.register(newUser, req.body.password, (err, user) => {
+                if (err) {
+                    req.flash('error', err.message);
+                    return res.render('register');
+                }
+                passport.authenticate('local')(req, res, () => {
+                    req.flash('success', 'Registration successful');
+                    res.redirect('/blogs');
+                })
+            })
         }
-        passport.authenticate('local')(req, res, () => {
-            req.flash('success', 'Registration successful');
-            res.redirect('/blogs');
-        })
     })
 });
 
