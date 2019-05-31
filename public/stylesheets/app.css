@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
   font-weight: 500;
   font-size: 14px;
-  font-family: 'inherit', sans-serif;
+  font-family: 'Rubik', sans-serif;
   letter-spacing: 2px;
 }
 
@@ -80,9 +80,8 @@ a:active {
 
 #author {
   font-weight: 400;
-  text-transform: uppercase;
   font-size: 13px;
-  font-family: 'inherit', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #created {
