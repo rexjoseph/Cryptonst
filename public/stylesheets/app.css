@@ -74,7 +74,8 @@ h3 a {
 }
 
 a:hover, 
-a:active {
+a:active,
+a:focus {
   color: #ff4e00;
 }
 
@@ -168,11 +169,16 @@ footer {
 
 footer ul li {
   list-style: none;
+  padding: 0;
 }
 
 footer ul li a {
   color: #333;
   margin: 0;
+}
+
+.info, .social {
+  padding-left: 0; 
 }
 
 .info li a {
