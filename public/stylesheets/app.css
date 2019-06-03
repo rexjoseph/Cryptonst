@@ -187,6 +187,7 @@ footer ul li a {
 
 .social li {
   display: flex;
+  padding: 0 15px;
 }
 
 .info li a {
@@ -194,7 +195,7 @@ footer ul li a {
 }
 
 .fab {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .pagination {
