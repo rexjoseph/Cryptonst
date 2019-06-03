@@ -1,15 +1,15 @@
 
 body {
-    font-family: 'Work Sans', Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 400;
-    color: #333;
+  font-family: 'Work Sans', Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 #title__heading {
@@ -22,12 +22,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .navbar, .active_aside {
-    background: rgb(51, 51, 51);
-    color: #fff;
+  background: rgb(51, 51, 51);
+  color: #fff;
 }
 
 .flex {
@@ -47,14 +47,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
   font-weight: 600;
   font-size: 13px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .flex li a {
   text-decoration: none;
   color: #fff;
 }
-
 
 .padding {
   margin: 30px 0;
