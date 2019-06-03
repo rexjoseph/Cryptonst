@@ -1,6 +1,6 @@
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Work Sans', Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
@@ -87,6 +87,12 @@ a:active {
 
 #created {
   font-size: 10px;
+}
+
+.caption_none p {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 #top2 {
