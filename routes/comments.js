@@ -19,13 +19,13 @@ router.post('/', middleware.isLoggedIn, (req, res) => {
 	// find blog using ID
 	Blog.findById(req.params.id, (err, blog) => {
 		if(err) {
-			console.log(err);
+			console.log('Error:', err);
 			res.redirect('/blogs');
 		} else {
 			Comment.create(req.body.comment, (err, comment) => {
 				if(err) {
 					req.flash('error', 'Something went wrong');
-					console.log(err);
+					console.log('Error:', err);
 				} else {
 					// add id
 					comment.author.id = req.user._id;

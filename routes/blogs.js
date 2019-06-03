@@ -3,15 +3,38 @@ var router = express.Router();
 var Blog = require('../models/blog');
 var middleware = require('../middleware/index');
 
+const ITEMS_PER_PAGE = 6;
+
 // Show all blogs in DB
-router.get('/', (req, res) => {
-    Blog.find({}, (err, allBlogs) => {
-        if(err) {
-            console.log(err);
-        } else {
-            res.render('blogs/index', {blogs: allBlogs, currentUser: req.user})
-        }
-    }).sort({created: -1});
+// router.get('/', (req, res) => {
+//     const page = req.query.page;
+//     Blog.find({}, (err, allBlogs) => {
+//         if(err) {
+//             console.log(err);
+//         } else {
+//             res.render('blogs/index', {blogs: allBlogs, currentUser: req.user})
+//         }
+//     }).sort({created: -1}).skip((page -1) * ITEMS_PER_PAGE).limit(ITEMS_PER_PAGE);
+// });
+
+ router.get('/', (req, res) => {
+    const page = +req.query.page || 1;
+    let totalBlogs;
+
+    Blog.find().countDocuments().then(numBlogs => { 
+        totalBlogs = numBlogs;
+        return Blog.find().sort({created: -1}).skip((page - 1) * ITEMS_PER_PAGE).limit(ITEMS_PER_PAGE);
+    })
+    .then(allBlogs => {
+        res.render('blogs/index', {
+            blogs: allBlogs, 
+            currentPage: page, 
+            hasNextPage: ITEMS_PER_PAGE * page < totalBlogs, 
+            hasPreviousPage: page > 1, 
+            nextPage: page + 1, 
+            previousPage: page - 1, 
+            lastPage: Math.ceil(totalBlogs / ITEMS_PER_PAGE)})
+    })
 });
 
 // Post to all blogs
@@ -59,7 +82,7 @@ router.get('/:id', (req, res) => {
 // edit blog
 router.get('/:id/edit', middleware.checkBlogOwnership, (req, res) => {
     Blog.findById(req.params.id, (err, foundBlog) => {
-        res.render('blogs/edit', {bog: foundBlog})
+        res.render('blogs/edit', {blog: foundBlog})
     });
 });
 

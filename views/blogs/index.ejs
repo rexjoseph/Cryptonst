@@ -28,6 +28,25 @@
             </div>
         </div>
     </div>
+    <section class="pagination">
+        <% if (currentPage != 1 && previousPage !== 1) { %>
+            <a href="/blogs/?page=1">1</a>
+        <% } %>
+
+        <% if (hasPreviousPage) { %>
+            <a href="/blogs/?page=<%= previousPage %>"><%= previousPage %></a>
+        <% } %>
+
+        <a class="active" href="/blogs/?page=<%= currentPage %>"><%= currentPage %></a>
+
+        <% if (hasNextPage) { %>
+            <a href="/blogs/?page=<%= nextPage %>"><%= nextPage %></a>
+        <% } %>
+
+        <% if (lastPage !== currentPage && nextPage !== lastPage) { %>
+            <a href="/blogs/?page=<%= lastPage %>"><%= lastPage %></a>
+        <% } %>
+    </section>
 </div>
 
 <% include ../partials/footer %>
