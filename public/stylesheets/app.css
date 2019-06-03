@@ -185,9 +185,9 @@ footer ul li a {
   flex-wrap: wrap;
 }
 
-.social li {
+.social li:last-child{
   display: flex;
-  padding: 0 15px;
+  padding-left:15px;
 }
 
 .info li a {
