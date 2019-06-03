@@ -6,24 +6,23 @@
             <div class="col-md-9">
                 <% blogs.forEach((blog) => { %>
                     <div class="col-md-4 col-sm-6 thumb" style="display: flex; flex-wrap: wrap;">
-                            <img src="<%= blog.image %>" />
-                            <div class="caption">
-                                <h3><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h3>
-                                <p><%- blog.content.substring(0, 50) %>...</p>
-                                <p id="created"><span id="author"><%= blog.author.username %> - <%= blog.created.toDateString() %></span></p>
-                            </div>
-                            <br>
-                            <br>
+                        <img src="<%= blog.image %>" />
+                        <div class="caption">
+                            <h3><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h3>
+                            <p><%- blog.content.substring(0, 50) %>...</p>
+                            <p id="created"><span id="author"><%= blog.author.username %> - <%= blog.created.toDateString() %></span></p>
+                        </div>
+                        <br>
                     </div>
                 <% }) %>
             </div>
             <div class="col-md-3">
             <p class="lead">Quick Links</p>
             <div class="list-group">
-                <li class="list-group-item active_aside">Archive</li>
-                <li class="list-group-item">Chat</li>
+                <li class="list-group-item active_aside">Sitemap</li>
                 <li class="list-group-item">Getting Started</li>
-                <li class="list-group-item">Search</li>
+                <!-- <li class="list-group-item">Search</li> -->
+                <li class="list-group-item">Chat</li>
                 <li class="list-group-item">FAQ</li>
             </div>
         </div>
