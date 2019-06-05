@@ -50,23 +50,6 @@
 <body>
     <script type="text/javascript" src="//deloplen.com/apu.php?zoneid=2643141" async data-cfasync="false"></script>
 
-        <nav class="navbar">
-            <div class="container">
-                <ul class="flex">
-                    <% if(!currentUser) { %>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/blogs">News</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Register</a></li>
-                    <% } else { %>
-                        <li><a href="/blogs">News</a></li>
-                        <li><a href="/profile">Profile</a></li>
-                        <li><a href="/logout">Sign out</a></li>
-                    <% } %>
-                </ul>
-            </div>
-        </nav>
-
 <div class="backdrop"></div>
 <header class="main-header">
     <button id="side-menu-toggle">Menu</button>
@@ -75,12 +58,12 @@
             <% if(!currentUser) { %>
             <li class="main-header__item">
                 <a href="/">Home</a>
-            </li>.
+            </li>
             <li class="main-header__item">
                 <a href="/blogs">News</a>
             </li>
             <li class="main-header__item">
-                <a href="/login">Login</a>
+                <a href="/login">Sign In</a>
             </li>
             <li class="main-header__item">
                 <a href="/register">Sign Up</a>
@@ -102,27 +85,31 @@
 
 <nav class="mobile-nav">
     <ul class="mobile-nav__item-list">
+        <% if(!currentUser) { %>
         <li class="mobile-nav__item">
-            <a class="<%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
+            <a href="/">Home</a>
         </li>
         <li class="mobile-nav__item">
-            <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Products</a>
+            <a href="/blogs">News</a>
         </li>
         <li class="mobile-nav__item">
-            <a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart">Cart</a>
+            <a href="/login">Sign In</a>
         </li>
         <li class="mobile-nav__item">
-            <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Orders</a>
+            <a href="/register">Sign Up</a>
+        </li>
+        <% } else { %>
+            <li class="mobile-nav__item">
+            <a href="/">News</a>
         </li>
         <li class="mobile-nav__item">
-            <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product
-            </a>
+            <a href="/profile">Profile</a>
         </li>
         <li class="mobile-nav__item">
-            <a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Products
-            </a>
+            <a href="/logout">Sign Out</a>
         </li>
-        </ul>
+        <% } %>
+    </ul>
 </nav>
     
         <div class="container">
