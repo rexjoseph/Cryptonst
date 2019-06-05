@@ -287,11 +287,15 @@ footer ul li a {
   border-radius: 3px;
 }
 
+button {
+  border: 0;
+  background: none;
+}
+
 #side-menu-toggle {
-  padding: 0.5rem;
   display: block;
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
 }
 
