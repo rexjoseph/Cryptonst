@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar, .active_aside {
-  background: rgb(51, 51, 51);
+  background: #ff4e00;
   color: #fff;
 }
 
