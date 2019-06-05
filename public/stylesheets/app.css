@@ -288,12 +288,11 @@ footer ul li a {
 }
 
 #side-menu-toggle {
-  border: 1px solid white;
-  font: inherit;
   padding: 0.5rem;
   display: block;
   background: transparent;
   color: white;
+  font-size: 18px;
   cursor: pointer;
 }
 
