@@ -20,7 +20,13 @@ router.post('/register', (req, res) => {
         if (user) {
             return res.status(400).json({email: 'Email already in use'})
         } else {
-            var newUser = new User({username: req.body.username, name: req.body.name, email: req.body.email});
+            var newUser = new User({
+                firstName: req.body.firstName, 
+                lastName: req.body.lastName,
+                username: req.body.username,
+                avatar: req.body.avatar, 
+                email: req.body.email
+            });
 
             User.register(newUser, req.body.password, (err, user) => {
                 if (err) {
@@ -43,6 +49,17 @@ router.get('/login', (req, res) => {
 
 // handling login logic
 router.post('/login', passport.authenticate('local', {successRedirect: '/blogs', failureRedirect: '/login'}), (req, res) => {
+});
+
+// Profile page
+router.get('/users/:id', (req, res) => {
+    User.findById(req.params.id, (err, user) => {
+        if (err) {
+            req.flash('error', "Something went wrong but we are working on it")
+            res.redirect('/')
+        }
+        res.render('users/show', {user: user})
+    })
 });
 
 // logout route
